@@ -1,0 +1,43 @@
+.column {
+  display: block;
+  float: left;
+}
+
+/* the container of the column */
+.parent:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+/* this below keeps everything on the page */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* below is the mobile first code */
+
+.column {
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (min-width: 641px) {
+  .column {
+    width: 50%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .main {
+    width: 66.66%;
+  }
+  .sidebar {
+    width: 33.33%;
+  }
+}
